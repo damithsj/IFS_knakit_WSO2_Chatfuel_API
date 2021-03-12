@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="CONTACT" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/CONTACT"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.3/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="E_MAIL" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/E_MAIL"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.4/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="PHONE_NO" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/PHONE_NO"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.5/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="ERR_DESCR" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/ERR_DESCR"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.6/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="CUSTOMER_NO" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/CUSTOMER_NO"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="PRIORITY" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/PRIORITY"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink inNode="//@operators.4/@basicContainer/@leftContainer/@leftConnectors.0/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="ADDRESS" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/ADDRESS"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink inNode="//@operators.0/@basicContainer/@leftContainer/@leftConnectors.0/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="ZIP_CODE" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/ZIP_CODE"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.11/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="CITY" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/CITY"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.12/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="COUNTY" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/COUNTY"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink/>
+          <outgoingLink/>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.13/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="REG_DATE" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/REG_DATE"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@operators.1/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.3"/>
+      </node>
+      <node name="CONTRACT" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/CONTRACT"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@operators.2/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.3"/>
+      </node>
+      <node name="REPORTED_BY" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/REPORTED_BY"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@operators.3/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.3"/>
+      </node>
+      <node name="CONTACT" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/CONTACT"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@outNode/@outgoingLink.3"/>
+      </node>
+      <node name="E_MAIL" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/E_MAIL"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.1/@outNode/@outgoingLink.3"/>
+      </node>
+      <node name="PHONE_NO" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/PHONE_NO"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.2/@outNode/@outgoingLink.3"/>
+      </node>
+      <node name="ERR_DESCR" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/ERR_DESCR"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.3/@outNode/@outgoingLink.3"/>
+      </node>
+      <node name="ORG_CODE" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/ORG_CODE"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@operators.5/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.2"/>
+      </node>
+      <node name="PRIORITY_ID" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/PRIORITY_ID"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@operators.4/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.3"/>
+      </node>
+      <node name="ADDRESS1" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/ADDRESS1"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.3"/>
+      </node>
+      <node name="ADDRESS2" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/ADDRESS2"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@operators.0/@basicContainer/@rightContainer/@rightConnectors.1/@outNode/@outgoingLink.3"/>
+      </node>
+      <node name="ZIP_CODE" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/ZIP_CODE"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.7/@outNode/@outgoingLink.2"/>
+      </node>
+      <node name="CITY" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/CITY"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.8/@outNode/@outgoingLink.2"/>
+      </node>
+      <node name="COUNTRY" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/COUNTRY"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.9/@outNode/@outgoingLink.2"/>
+      </node>
+      <node name="WO_NO" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/WO_NO"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@operators.6/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+  <operators xsi:type="datamapper:Split" defaultInputConnectors="1" defaultOutputConnectors="2" outputSizeFixed="false" operatorType="SPLIT" delimiter=",">
+    <basicContainer>
+      <leftContainer>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.6/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+      </leftContainer>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.9/@inNode"/>
+          </outNode>
+        </rightConnectors>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.10/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+  <operators xsi:type="datamapper:Properties" defaultOutputConnectors="1" operatorType="PROPERTIES" name="reg_date" scope="default">
+    <basicContainer>
+      <leftContainer/>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.0/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+  <operators xsi:type="datamapper:Constant" defaultOutputConnectors="1" operatorType="CONSTANT" constantValue="1">
+    <basicContainer>
+      <leftContainer/>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+  <operators xsi:type="datamapper:Constant" defaultOutputConnectors="1" operatorType="CONSTANT" constantValue="IFSAPP">
+    <basicContainer>
+      <leftContainer/>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.2/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+  <operators xsi:type="datamapper:Split" defaultInputConnectors="1" defaultOutputConnectors="2" outputSizeFixed="false" operatorType="SPLIT" delimiter="-">
+    <basicContainer>
+      <leftContainer>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.5/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+      </leftContainer>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.8/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+  <operators xsi:type="datamapper:Constant" defaultOutputConnectors="1" operatorType="CONSTANT" constantValue="1300">
+    <basicContainer>
+      <leftContainer/>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink/>
+            <outgoingLink/>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.7/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+  <operators xsi:type="datamapper:Constant" defaultOutputConnectors="1" operatorType="CONSTANT" constantValue="-">
+    <basicContainer>
+      <leftContainer/>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.14/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+</datamapper:DataMapperRoot>

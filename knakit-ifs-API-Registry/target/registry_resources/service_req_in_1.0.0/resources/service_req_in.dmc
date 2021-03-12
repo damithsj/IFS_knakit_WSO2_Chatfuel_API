@@ -1,0 +1,46 @@
+map_S_root_S_root = function(){ 
+var outputroot={};
+var SPLIT_17_0 = '';
+var SPLIT_20_0 = '';
+
+SPLIT_17_0 = inputroot.ADDRESS.split(',');
+SPLIT_20_0 = inputroot.PRIORITY.split('-');
+outputroot =  {};
+outputroot.REG_DATE = DM_PROPERTIES.default['reg_date'];
+outputroot.CONTRACT = '1';
+outputroot.REPORTED_BY = 'IFSAPP';
+outputroot.CONTACT = inputroot.CONTACT;
+outputroot.E_MAIL = inputroot.E_MAIL;
+outputroot.PHONE_NO = inputroot.PHONE_NO;
+outputroot.ERR_DESCR = inputroot.ERR_DESCR;
+outputroot.ORG_CODE = '1300';
+outputroot.PRIORITY_ID = SPLIT_20_0[0];
+outputroot.ADDRESS1 = SPLIT_17_0[0];
+outputroot.ADDRESS2 = SPLIT_17_0[1];
+outputroot.ZIP_CODE = inputroot.ZIP_CODE;
+outputroot.CITY = inputroot.CITY;
+outputroot.COUNTRY = inputroot.COUNTY;
+outputroot.WO_NO = '-';
+return outputroot;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

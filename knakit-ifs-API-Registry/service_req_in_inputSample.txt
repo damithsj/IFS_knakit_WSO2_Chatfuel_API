@@ -1,0 +1,13 @@
+{ 
+  "CONTACT": "first name last name",
+  "E_MAIL": "12345",
+  "PHONE_NO": "12345",
+  "ERR_DESCR": "12345",
+  "CUSTOMER_NO": "12345",
+  "PRIORITY": "12345",
+  "ADDRESS": "FULL address",
+  "ZIP_CODE": "12345",
+  "CITY": "12345",
+  "COUNTY": "12345"
+  
+}

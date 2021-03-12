@@ -1,0 +1,19 @@
+map_S_resultSet_S_root = function(){ 
+var outputroot={};
+
+outputroot =  {};
+outputroot.set_attributes =  {};
+outputroot.set_attributes.first_name = inputifs_resultSet.ifs_record.ifs_FIRST_NAME._ELEMVAL;
+outputroot.set_attributes.last_name = inputifs_resultSet.ifs_record.ifs_LAST_NAME._ELEMVAL;
+outputroot.messages =  [];
+outputroot.messages[0] =  {};
+outputroot.messages[0].text = 'User successfully validated in IFS';
+return outputroot;
+};
+
+
+
+
+
+
+

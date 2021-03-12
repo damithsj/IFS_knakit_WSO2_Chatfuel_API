@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="ifs:resultSet" schemaDataType="OBJECT" level="1">
+      <node name="ifs:record" schemaDataType="OBJECT" level="2">
+        <node name="ifs:CONTACT" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:CONTACT"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:ZIP_CODE" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:ZIP_CODE"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:WO_NO" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:WO_NO"/>
+          <properties key="object_value_type" value="number"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="ifs:REG_DATE" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:REG_DATE"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:CONTRACT" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:CONTRACT"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:PHONE_NO" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:PHONE_NO"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:ERR_DESCR" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:ERR_DESCR"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:REPORTED_BY" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:REPORTED_BY"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:E_MAIL" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:E_MAIL"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:PRIORITY_ID" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:PRIORITY_ID"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:CITY" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:CITY"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:COUNTRY" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:COUNTRY"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:ORG_CODE" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:ORG_CODE"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:ADDRESS1" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:ADDRESS1"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="ifs:ADDRESS2" schemaDataType="OBJECT" level="3">
+          <node name="@ifs:Type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:Type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/ifs:record/ifs:ADDRESS2"/>
+          <properties key="object_value_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/ifs:record/ifs:Type]}"/>
+          <properties key="attribute_type" value="{attribute_type=[string]}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/ifs:record"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{ifs:CONTACT={id=http://wso2jsonschema.org/ifs:record/ifs:CONTACT, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:ZIP_CODE={id=http://wso2jsonschema.org/ifs:record/ifs:ZIP_CODE, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:WO_NO={id=http://wso2jsonschema.org/ifs:record/ifs:WO_NO, type=object, value={type=number}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:REG_DATE={id=http://wso2jsonschema.org/ifs:record/ifs:REG_DATE, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:CONTRACT={id=http://wso2jsonschema.org/ifs:record/ifs:CONTRACT, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:PHONE_NO={id=http://wso2jsonschema.org/ifs:record/ifs:PHONE_NO, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:ERR_DESCR={id=http://wso2jsonschema.org/ifs:record/ifs:ERR_DESCR, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:REPORTED_BY={id=http://wso2jsonschema.org/ifs:record/ifs:REPORTED_BY, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:E_MAIL={id=http://wso2jsonschema.org/ifs:record/ifs:E_MAIL, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:PRIORITY_ID={id=http://wso2jsonschema.org/ifs:record/ifs:PRIORITY_ID, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:CITY={id=http://wso2jsonschema.org/ifs:record/ifs:CITY, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:COUNTRY={id=http://wso2jsonschema.org/ifs:record/ifs:COUNTRY, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:ORG_CODE={id=http://wso2jsonschema.org/ifs:record/ifs:ORG_CODE, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:ADDRESS1={id=http://wso2jsonschema.org/ifs:record/ifs:ADDRESS1, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}, ifs:ADDRESS2={id=http://wso2jsonschema.org/ifs:record/ifs:ADDRESS2, type=object, value={type=string}, attributes={ifs:Type={id=http://wso2jsonschema.org/ifs:record/ifs:Type, type=string}}}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+      <properties key="namespaces" value="{prefix=ifs, url=http://wso2.org/knak/ifs/connector}"/>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="set_attributes" schemaDataType="OBJECT" level="2">
+        <node name="WO_NO" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/set_attributes/WO_NO"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/set_attributes"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="messages" level="2">
+        <node name="text" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/messages/0/text"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode incomingLink="//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.1"/>
+        </node>
+        <properties key="type" value="array"/>
+        <properties key="id" value="http://wso2jsonschema.org/messages"/>
+        <properties key="items_id" value="http://wso2jsonschema.org/messages/0"/>
+        <properties key="items_type" value="object"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{WO_NO={id=http://wso2jsonschema.org/set_attributes/WO_NO, type=string}}"/>
+        <properties key="properties_id" value="{text={id=http://wso2jsonschema.org/messages/0/text, type=string}}"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.2/@outNode/@outgoingLink.0"/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+  <operators xsi:type="datamapper:Constant" defaultOutputConnectors="1" operatorType="CONSTANT" constantValue="WO Created in IFS">
+    <basicContainer>
+      <leftContainer/>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink/>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+</datamapper:DataMapperRoot>

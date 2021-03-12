@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/ChatFuelAPI" name="knakit-ifs" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/getUserByEmail*">
+        <inSequence>
+            <property description="email" expression="$url:email" name="email" scope="default" type="STRING"/>
+            <log description="Log" level="custom" separator=",">
+                <property expression="$ctx:email" name="email"/>
+            </log>
+            <payloadFactory description="Create Payload XML" media-type="xml">
+                <format>
+                    <request xmlns="">
+                        <bindVariables>
+                            <EMAIL>$1</EMAIL>
+                        </bindVariables>
+                        <sqlStatement>
+select FIRST_NAME, LAST_NAME
+  from PERSON_INFO_ALL
+ where person_id =
+       (SELECT identity
+          FROM comm_method a
+         WHERE party_type_db = 'PERSON'
+           AND value = :EMAIL
+           AND method_id_db = 'E_MAIL'
+           AND method_default = 'TRUE'
+           AND ((SYSDATE BETWEEN valid_from AND valid_to) OR
+               (valid_from IS NULL AND valid_to IS NULL))
+           AND EXISTS (select 1
+                  from CUSTOMER_INFO_CONTACT b
+                 where b.person_id = a.identity) --check whether the person registed as a customer contact
+        )
+	</sqlStatement>
+                    </request>
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:email"/>
+                </args>
+            </payloadFactory>
+            <knakitifs.init/>
+            <knakitifs.selectStatement/>
+            <datamapper config="gov:datamapper/xml_json_user.dmc" description="IFS response to JSON" inputSchema="gov:datamapper/xml_json_user_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/xml_json_user_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/xml_json_user_xsltStyleSheet.xml"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/serviceRequest">
+        <inSequence>
+            <property description="Current date time" expression="get-property('SYSTEM_DATE', 'yyyy-MM-dd-HH.mm.ss')" name="reg_date" scope="default" type="STRING"/>
+            <datamapper config="gov:datamapper/service_req_in.dmc" description="Format input JSON" inputSchema="gov:datamapper/service_req_in_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/service_req_in_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/service_req_in_xsltStyleSheet.xml"/>
+            <payloadFactory description="Create payload XML" media-type="xml">
+                <format>
+                    <request xmlns="">
+                        <bindVariables>
+                            <REG_DATE>$1</REG_DATE>
+                            <CONTRACT>$2</CONTRACT>
+                            <REPORTED_BY>$3</REPORTED_BY>
+                            <CONTACT>$4</CONTACT>
+                            <E_MAIL>$5</E_MAIL>
+                            <PHONE_NO>$6</PHONE_NO>
+                            <ERR_DESCR>$7</ERR_DESCR>
+                            <ORG_CODE>$8</ORG_CODE>
+                            <PRIORITY_ID>$9</PRIORITY_ID>
+                            <ADDRESS1>$10</ADDRESS1>
+                            <ADDRESS2>$11</ADDRESS2>
+                            <ZIP_CODE>$12</ZIP_CODE>
+                            <CITY>$13</CITY>
+                            <COUNTRY>$14</COUNTRY>
+                            <WO_NO>$15</WO_NO>
+                        </bindVariables>
+                        <plsqlBlock>
+DECLARE
+	info_ VARCHAR2(32000);
+	attr_ VARCHAR2(32000);
+	objid_ VARCHAR2(32000);
+	objversion_ VARCHAR2(32000);
+	wo_no_ VARCHAR2(32000);
+	
+
+BEGIN
+	CLIENT_SYS.Add_To_Attr('REG_DATE', :REG_DATE, attr_);
+	CLIENT_SYS.Add_To_Attr('CONTRACT', :CONTRACT, attr_);
+	CLIENT_SYS.Add_To_Attr('REPORTED_BY', :REPORTED_BY, attr_);
+	CLIENT_SYS.Add_To_Attr('CONTACT', :CONTACT, attr_);
+	CLIENT_SYS.Add_To_Attr('E_MAIL', LOWER(:E_MAIL), attr_);
+	CLIENT_SYS.Add_To_Attr('PHONE_NO', :PHONE_NO, attr_);
+	CLIENT_SYS.Add_To_Attr('ERR_DESCR', :ERR_DESCR, attr_);
+	CLIENT_SYS.Add_To_Attr('ORG_CODE', :ORG_CODE, attr_);
+	CLIENT_SYS.Add_To_Attr('PRIORITY_ID', :PRIORITY_ID, attr_);
+
+	ACTIVE_SEPARATE_API.NEW__( info_ , objid_ , objversion_ , attr_ , 'DO' );
+	
+	wo_no_ := CLIENT_SYS.Get_Item_Value('WO_NO', attr_);
+	
+    work_order_address_api.insert_modify_address(wo_no_ =&gt; wo_no_,
+										   address_id_ =&gt; '',
+										   address1_ =&gt; :ADDRESS1,
+										   address2_ =&gt; :ADDRESS2,
+										   zip_code_ =&gt; :ZIP_CODE,
+										   city_ =&gt; :CITY,
+										   state_ =&gt; '',
+										   country_ =&gt; :COUNTRY,
+										   country_code_ =&gt; '',
+										   address3_ =&gt; '',
+										   address4_ =&gt; '',
+										   address5_ =&gt; '',
+										   address6_ =&gt; '',
+										   location_id_ =&gt; '',
+										   address_info_id_ =&gt; '',
+										   county_ =&gt;  :COUNTRY);
+
+	:WO_NO := wo_no_;
+END;
+	</plsqlBlock>
+                    </request>
+                </format>
+                <args>
+                    <arg evaluator="json" expression="$.REG_DATE"/>
+                    <arg evaluator="json" expression="$.CONTRACT"/>
+                    <arg evaluator="json" expression="$.REPORTED_BY"/>
+                    <arg evaluator="json" expression="$.CONTACT"/>
+                    <arg evaluator="json" expression="$.E_MAIL"/>
+                    <arg evaluator="json" expression="$.PHONE_NO"/>
+                    <arg evaluator="json" expression="$.ERR_DESCR"/>
+                    <arg evaluator="json" expression="$.ORG_CODE"/>
+                    <arg evaluator="json" expression="$.PRIORITY_ID"/>
+                    <arg evaluator="json" expression="$.ADDRESS1"/>
+                    <arg evaluator="json" expression="$.ADDRESS2"/>
+                    <arg evaluator="json" expression="$.ZIP_CODE"/>
+                    <arg evaluator="json" expression="$.CITY"/>
+                    <arg evaluator="json" expression="$.COUNTRY"/>
+                    <arg evaluator="json" expression="$.WO_NO"/>
+                </args>
+            </payloadFactory>
+            <knakitifs.init/>
+            <knakitifs.plsqlBlock/>
+            <datamapper config="gov:datamapper/service_request.dmc" description="IFS response to JSON" inputSchema="gov:datamapper/service_request_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/service_request_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/service_request_xsltStyleSheet.xml"/>
+            <respond description="Respond"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/getServiceRequest*">
+        <inSequence>
+            <property description="email" expression="$url:email" name="email" scope="default" type="STRING"/>
+            <property description="wo_no" expression="$url:wo_no" name="wo_no" scope="default" type="STRING"/>
+            <log description="Log input">
+                <property expression="$ctx:email" name="email"/>
+                <property expression="$ctx:wo_no" name="wo_no"/>
+            </log>
+            <payloadFactory description="Create payload XML" media-type="xml">
+                <format>
+                    <request xmlns="">
+                        <bindVariables>
+                            <EMAIL>$1</EMAIL>
+                            <WO>$2</WO>
+                        </bindVariables>
+                        <sqlStatement>
+select wo_no, REG_DATE, CONTACT, PHONE_NO, ADDRESS1, ADDRESS2, ZIP_CODE, CITY, COUNTY COUNTRY, PLAN_S_DATE, PLAN_F_DATE, REAL_S_DATE, REAL_F_DATE, STATE, 'ACTIVE_WO' origin from ACTIVE_SEPARATE_UIV 
+where E_MAIL = LOWER(:EMAIL)
+AND WO_NO = :WO
+union
+select wo_no, REG_DATE, CONTACT, PHONE_NO, ADDRESS1, ADDRESS2, ZIP_CODE, CITY, COUNTRY, PLAN_S_DATE, PLAN_F_DATE, REAL_S_DATE, REAL_F_DATE, STATE, 'HIST_WO' origin from HISTORICAL_SEPARATE_UIV
+where E_MAIL = LOWER(:EMAIL)
+AND WO_NO = :WO
+	</sqlStatement>
+                    </request>
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:email"/>
+                    <arg evaluator="xml" expression="$ctx:wo_no"/>
+                </args>
+            </payloadFactory>
+            <knakitifs.init/>
+            <knakitifs.selectStatement/>
+            <datamapper config="gov:datamapper/service_req_details.dmc" description="IFS XML to JSON" inputSchema="gov:datamapper/service_req_details_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/service_req_details_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/service_req_details_xsltStyleSheet.xml"/>
+            <respond description="Response"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
